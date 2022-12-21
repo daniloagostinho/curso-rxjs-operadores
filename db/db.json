@@ -1,0 +1,10 @@
+{
+    "users": [
+        {"id": 1, "name": "Danilo Silva", "cpf": "03354676563"},
+        {"id": 2, "name": "Leonardo", "cpf": "03354676567"},
+        {"id": 3, "name": "Amanda", "cpf": "03354676564"}
+    ],
+    "user": {
+        "cpf": "03354676567"
+    }
+}
