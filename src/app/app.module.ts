@@ -42,6 +42,7 @@ import { EveryComponent } from './componentes/operadores-condicionais-booleanos/
 import { FindComponent } from './componentes/operadores-condicionais-booleanos/find/find.component';
 import { FindIndexComponent } from './componentes/operadores-condicionais-booleanos/find-index/find-index.component';
 import { IsEmptyComponent } from './componentes/operadores-condicionais-booleanos/is-empty/is-empty.component';
+import { SubjectComponent } from './componentes/subject/subject.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +83,8 @@ import { IsEmptyComponent } from './componentes/operadores-condicionais-booleano
     EveryComponent,
     FindComponent,
     FindIndexComponent,
-    IsEmptyComponent
+    IsEmptyComponent,
+    SubjectComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

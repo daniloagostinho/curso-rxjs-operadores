@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs';
+import { interval, Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -21,15 +21,23 @@ export class ObservablesComponent implements OnInit {
       subscriber.complete();
     })
 
-    observable.subscribe(res => {
-      console.log(res)
-    },
-    (error) => {
-      console.log(error)
-    },
-    () => {
-      console.log('Completou o observable!')
-    })
+    const it = interval(1000)
+
+    const observer = {
+      next: (x: any) => console.log('Observer next value ' + x),
+    }
+
+
+    const subscription = observable.subscribe(observer)
+    const subscription2 = it.subscribe(console.log)
+
+
+    setTimeout(() => {
+      subscription2.unsubscribe();
+    }, 3000)
+
+    subscription.unsubscribe();
+
   }
 
 }
